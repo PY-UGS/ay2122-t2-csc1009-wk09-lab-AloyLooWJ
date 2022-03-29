@@ -2,10 +2,11 @@ import java.util.Random;
 
 public class RandomCharacter
 {
-    public static char[] lowerCaseArray = new char[15];
-    public static char[] upperCaseArray = new char[15];
-    public static char[] digitArray = new char[15];
-    public static char[] array = new char[15];
+    final static int noOfChar = 15;
+    public static char[] lowerCaseArray = new char[noOfChar];
+    public static char[] upperCaseArray = new char[noOfChar];
+    public static char[] digitArray = new char[noOfChar];
+    public static char[] array = new char[noOfChar];
 
     public static char generateRandomCharacter()
     {
@@ -84,7 +85,7 @@ public class RandomCharacter
 
     public static void main(String[] args)
     {
-        for (int i = 0; i < 15; i++)
+        for (int i = 0; i < noOfChar; i++)
         {
             lowerCaseArray[i] = getRandomLowerCaseLetter();
             upperCaseArray[i] = getRandomUpperCaseLetter();
@@ -92,22 +93,22 @@ public class RandomCharacter
             array[i] = getCharacter();
         }
         
-        for (int j = 0; j < 15; j++)
+        for (int j = 0; j < noOfChar; j++)
         {
             System.out.print(lowerCaseArray[j]);
         }
         System.out.println();
-        for (int j = 0; j < 15; j++)
+        for (int j = 0; j < noOfChar; j++)
         {
             System.out.print(upperCaseArray[j]);
         }
         System.out.println();
-        for (int j = 0; j < 15; j++)
+        for (int j = 0; j < noOfChar; j++)
         {
             System.out.print(digitArray[j]);
         }
         System.out.println();
-        for (int j = 0; j < 15; j++)
+        for (int j = 0; j < noOfChar; j++)
         {
             System.out.print(array[j]);
         }
